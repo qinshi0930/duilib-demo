@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="1200,720" sizebox="4,4,6,6" roundcorner="0,0" caption="0,0,0,64" bktrans="false" mininfo="600,480" showshadow="true" shadowimage="main/shadow.png" shadowsize="6" shadowcorner="8,8,8,8">
+  <Font shared="true" id="0" name="宋体" size="13" default="true"/>
+  <Font shared="true" id="1" name="宋体" size="12" bold="false" underline="false"/>
+  <Font shared="true" id="2" name="宋体" size="16" bold="false"/>
+  <Font shared="true" id="3" name="宋体" size="18" bold="false"/>
+
+  <Style name="colorbtn_style" shared="true" value="textcolor=&quot;#FFAFADAD&quot; hottextcolor=&quot;#FFFFFFFF&quot; textpadding=&quot;6,0,6,0&quot; bkcolor=&quot;#FF2c2c2c&quot; hotbkcolor=&quot;#FF4b4b4b&quot; pushedbkcolor=&quot;#FF424242&quot;"  />
+  
+  <VerticalLayout name="root" bkcolor="#FF202223">
+    <HorizontalLayout name="areaTitle" height="35" >
+      <HorizontalLayout name="apptitle" childpadding="6">
+        <VerticalLayout inset="10,10,0,0" childpadding="5">
+          <Label name="title_lb" height="20" autocalcwidth="true" text="播放器demo" valign="vcenter" align="left" wordbreak="false" textcolor="#FFEEEEEE" font="2" tooltip="播放器demo"/>
+        </VerticalLayout>
+      </HorizontalLayout>
+
+      <HorizontalLayout inset="0,-1,0,0" float="true" height="30" width="95" floatalign="right,top" bordercolor="#FFFF0000" bordersize="0">
+        <FadeButton name="minbtn" virtualwnd="mainpage" width="28" height="20" tooltip="最小化" normalimage="file='sysbtn/btn_mini_normal.png'" hotimage="file='sysbtn/btn_mini_highlight.png'" pushedimage="file='sysbtn/btn_mini_down.png' "/>
+        <FadeButton name="maxbtn" virtualwnd="mainpage" width="28" height="20" tooltip="最大化" normalimage="file='sysbtn/btn_max_normal.png'" hotimage="file='sysbtn/btn_max_highlight.png'" pushedimage="file='sysbtn/btn_max_down.png' "/>
+        <FadeButton name="restorebtn" virtualwnd="mainpage" width="28" height="20" tooltip="还原" visible="false" normalimage="file='sysbtn/btn_restore_normal.png'" hotimage="file='sysbtn/btn_restore_highlight.png'" pushedimage="file='sysbtn/btn_restore_down.png' "/>
+        <FadeButton name="closebtn" virtualwnd="mainpage" width="39" height="20" tooltip="关闭" normalimage="file='sysbtn/btn_close_normal.png'" hotimage="file='sysbtn/btn_close_highlight.png'" pushedimage="file='sysbtn/btn_close_down.png' "/>
+      </HorizontalLayout>
+
+    </HorizontalLayout>
+
+    <VerticalLayout name="areaPlay" bkcolor="#FF666666">
+    </VerticalLayout>
+
+    <!-- 控制区 -->
+    <VerticalLayout name="areaCtrl" height="65" bkcolor="#FF383A48" >
+      <!-- 进度条 -->
+      <HorizontalLayout height="20" padding="2,0,2,0">
+        <Button name="btnBackward" tooltip="快退10秒" width="24" padding="0,5,0,5" normalimage="images/fast_backward.png" hotimage="images/fast_backward_hover.png" pushedimage="images/fast_backward_pressed.png" />
+        <Slider name="sliderPlay" height="20" min="0" value="0" hor="true" bkimage="file='images/SliderBK.png'" foreimage="file='images/SliderFore.png'" thumbimage="file='images/SliderBar.png' source='0,0,20,20'" thumbhotimage="file='images/SliderBar.png' source='21,0,41,20'" thumbpushedimage="file='images/SliderBar.png' source='42,0,62,20'" thumbsize="20,20" sendmove="true" />
+        <Button name="btnForward" tooltip="快进10秒" width="24" padding="0,5,0,5" normalimage="images/fast_forward.png" hotimage="images/fast_forward_hover.png" pushedimage="images/fast_forward_pressed.png"/>
+      </HorizontalLayout>
+
+      <HorizontalLayout height="45" inset="5,5,5,5">
+        <HorizontalLayout childvalign="vcenter" childpadding="2">
+          <Button name="btnOpen" text="选择文件" textcolor="#FF111111" textpadding="6,0,6,0" style="colorbtn_style" width="0" autocalcwidth="true"/>
+          <Button name="btnPlay" text="播放" textcolor="#FF111111" textpadding="6,0,6,0" style="colorbtn_style" width="0" autocalcwidth="true"/>
+          <Button name="btnPause" text="暂停" textcolor="#FF111111" textpadding="6,0,6,0" style="colorbtn_style" width="0" autocalcwidth="true"/>
+          <Button name="btnStop" text="停止" textcolor="#FF111111" textpadding="6,0,6,0" style="colorbtn_style" width="0" autocalcwidth="true"/>
+          <Label name="txtDuration" height="20" autocalcwidth="true" text="0:00/0:00" textpadding="6 0 6 0" valign="vcenter" align="left" wordbreak="false" textcolor="#FFEEEEEE" font="1" />
+        </HorizontalLayout>
+        <HorizontalLayout width="118">
+          <Button name="btnMute" tooltip="静音" width="19" height="19" normalimage="images/vol.png" hotimage="images/vol_hover.png" pushedimage="images/vol_pressed.png" />
+          <Button name="btnMuted" tooltip="恢复音量" visible="false" width="19" height="19" normalimage="images/vol_off.png" hotimage="images/vol_off_hover.png" pushedimage="images/vol_off_pressed.png" />
+          <Slider name="sliderVolume" width="80" height="20" min="0" max="255" value="182" bkimage="images/SliderBKVolume.png" foreimage="images/SliderForeVolume.png" hor="true" thumbimage="file='images/SliderBar.png' source='0,0,20,20'" thumbhotimage="file='images/SliderBar.png' source='21,0,41,20'" thumbpushedimage="file='images/SliderBar.png' source='42,0,62,20'" thumbsize="20,20" sendmove="true" />
+        </HorizontalLayout>
+        
+      </HorizontalLayout>
+    </VerticalLayout>
+  </VerticalLayout>
+</Window>
