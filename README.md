@@ -6,5 +6,6 @@
 **音量调节**：静音、取消静音、音量滑块等功能
 
 ## 技术栈
-- Duilib
-- FFmpeg
+- [Duilib](https://github.com/duilib/duilib)
+- [FFmpeg](https://github.com/ffmpeg/ffmpeg)
+- [ffplayer](https://github.com/rockcarry/ffplayer)
