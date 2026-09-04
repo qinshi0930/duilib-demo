@@ -10,6 +10,10 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DuiLib", "dependency\DuiLib\DuiLib.vcxproj", "{E106ACD7-4E53-4AEE-942B-D0DD426DB34E}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PlayDemo", "demos\PlayDemo\PlayDemo.vcxproj", "{141F5F43-B0DF-46D1-B4DC-DABB8BB856E8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2537A15B-F975-416D-8106-22CD6EDFCCDE} = {2537A15B-F975-416D-8106-22CD6EDFCCDE}
+		{E106ACD7-4E53-4AEE-942B-D0DD426DB34E} = {E106ACD7-4E53-4AEE-942B-D0DD426DB34E}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ffplayer", "dependency\ffplayer\ffplayer.vcxproj", "{2537A15B-F975-416D-8106-22CD6EDFCCDE}"
 EndProject

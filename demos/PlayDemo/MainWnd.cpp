@@ -92,7 +92,6 @@ void CMainWnd::InitWindow()
 
 	//init mediaplay
 	m_player.SetHwnd(m_hWnd);
-	ShowPlayBtn();
 
 	// 播放时间显示
 	SetTimer(m_hWnd, PROGRESSTIMER, 100, NULL);
